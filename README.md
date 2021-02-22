@@ -1,3 +1,3 @@
 # Machine-Learning-projects
 
-View my Machine Learning Projects [here](https://medium.com/swlh/the-hyperparameter-cheat-sheet-770f1fed32ff)
+View my Machine Learning Projects [here](https://ahmad-almosallam.github.io/Machine-Learning-projects/)
