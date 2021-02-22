@@ -5,9 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>Student Performance Classification</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Machine Learning Projects</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 
 <body class="">
@@ -21,9 +20,7 @@
         <div class="row h-100 align-items-center">
             <div class="col-lg-6 col-sm-12 d-flex flex-row justify-content-center ">
                 <div class="card ml" style="width: 40rem; cursor: pointer;" id="student">
-                    <img class="card-img-top"
-                        src="https://www.sansone-ac.com/wp-content/uploads/2016/09/Does-Classroom-Temperature-Affect-Students-Performance-794x530.jpg"
-                        alt="Card image cap">
+                    <img class="card-img-top" src="https://www.sansone-ac.com/wp-content/uploads/2016/09/Does-Classroom-Temperature-Affect-Students-Performance-794x530.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h4 class="card-text text-center">Student's Academic Performance Classification</h4>
                     </div>
@@ -31,8 +28,7 @@
             </div>
             <div class="col-lg-6 col-sm-12 d-flex flex-row justify-content-center ">
                 <div class="card ml" style="width: 40rem; cursor: pointer;" id="land">
-                    <img class="card-img-top" src="https://www.mikestarks.com/wp-content/uploads/2017/07/land-price.jpg"
-                        alt="Card image cap">
+                    <img class="card-img-top" src="https://www.mikestarks.com/wp-content/uploads/2017/07/land-price.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h4 class="card-text text-center">Land Prices Prediction</h4>
                     </div>
@@ -223,8 +219,7 @@
                                     100</sup></span>
 
                         </div>
-                        <input type="number" class="form-control" min="0" max="100" aria-label="Default"
-                            id="raisedhands" aria-describedby="inputGroup-sizing-default">
+                        <input type="number" class="form-control" min="0" max="100" aria-label="Default" id="raisedhands" aria-describedby="inputGroup-sizing-default">
                     </div>
 
                     <div class="input-group mb-3">
@@ -233,8 +228,7 @@
                                     - 100</sup></span>
 
                         </div>
-                        <input type="number" class="form-control" min="0" max="100" aria-label="Default"
-                            id="visted_resource" aria-describedby="inputGroup-sizing-default">
+                        <input type="number" class="form-control" min="0" max="100" aria-label="Default" id="visted_resource" aria-describedby="inputGroup-sizing-default">
                     </div>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
@@ -242,8 +236,7 @@
                                     0 - 100</sup></span>
 
                         </div>
-                        <input type="number" class="form-control" min="0" max="100" aria-label="Default"
-                            id="AnnouncementsView" aria-describedby="inputGroup-sizing-default">
+                        <input type="number" class="form-control" min="0" max="100" aria-label="Default" id="AnnouncementsView" aria-describedby="inputGroup-sizing-default">
                     </div>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
@@ -251,8 +244,7 @@
                                     100</sup></span>
 
                         </div>
-                        <input type="number" class="form-control" min="0" max="100" aria-label="Default" id="Discussion"
-                            aria-describedby="inputGroup-sizing-default">
+                        <input type="number" class="form-control" min="0" max="100" aria-label="Default" id="Discussion" aria-describedby="inputGroup-sizing-default">
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -332,37 +324,30 @@
                         <div class="input-group-prepend">
                             <label class="input-group-text" for="streetwidth">Street Width</label>
                         </div>
-                        <input type="number" class="form-control" aria-label="Default" id="streetwidth"
-                            aria-describedby="inputGroup-sizing-default">
+                        <input type="number" class="form-control" aria-label="Default" id="streetwidth" aria-describedby="inputGroup-sizing-default">
                     </div>
 
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <label class="input-group-text" for="size">Size</label>
                         </div>
-                        <input type="number" class="form-control" aria-label="Default" id="size"
-                            aria-describedby="inputGroup-sizing-default">
+                        <input type="number" class="form-control" aria-label="Default" id="size" aria-describedby="inputGroup-sizing-default">
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" id="predict_land" class="btn btn-primary">Predeict</button>
-                    <button type="button" id="random_data" onclick="" class="btn btn-primary">Generate
+                    <button type="button" id="random_data" onclick="random_data_land()" class="btn btn-primary">Generate
                         random data</button>
                 </div>
             </div>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-    <script
-        src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@2.1.7/dist/loadingoverlay.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@2.1.7/dist/loadingoverlay.min.js"></script>
     <script>
-        $(".ml").click(function () {
+        $(".ml").click(function() {
             var id = $(this).attr("id");
             if (id == "student") {
                 $("#student_modal").modal('show');
@@ -374,11 +359,11 @@
 
 
 
-// ---------------------------------------------
-// ---------------- student --------------------
-// ---------------------------------------------
+        // ---------------------------------------------
+        // ---------------- student --------------------
+        // ---------------------------------------------
 
-        $("#predict_student").click(function () {
+        $("#predict_student").click(function() {
             $("#prediction").text(" ");
             var gender = $("#gender").val();
             var Nationalty = $("#Nationalty").val();
@@ -420,14 +405,14 @@
                     Discussion: Discussion,
                 }),
                 contentType: "application/json; charset=UTF-8",
-                success: function (data) {
+                success: function(data) {
                     var pred = " High-Level "
                     if (data.data == 2)
                         pred = " Medium-Level "
                     else if (data.data == 1)
                         pred = " Low-Level "
 
-                    setTimeout(function () {
+                    setTimeout(function() {
                         $.LoadingOverlay("hide");
                         $("#prediction").show();
                         $("#prediction").append(" <span class='text-danger'>&#8203; " + pred + " &#8203;</span> student");
@@ -435,7 +420,7 @@
 
 
                 },
-                error: function (data) {
+                error: function(data) {
 
                 }
             })
@@ -474,13 +459,13 @@
 
 
 
-// ---------------------------------------------
-// ---------------- Land -----------------------
-// ---------------------------------------------
+        // ---------------------------------------------
+        // ---------------- Land -----------------------
+        // ---------------------------------------------
 
 
 
-        $("#predict_land").click(function(){
+        $("#predict_land").click(function() {
             $("#prediction").text(" ");
             var MainLocation = $("#MainLocation").val();
             var SubLocation = $("#SubLocation").val();
@@ -504,18 +489,18 @@
                     size: size,
                 }),
                 contentType: "application/json; charset=UTF-8",
-                success: function (data) {
+                success: function(data) {
                     var pred = data.data;
-                    
-                    setTimeout(function () {
+
+                    setTimeout(function() {
                         $.LoadingOverlay("hide");
                         $("#prediction").show();
-                        $("#prediction").append(" <span class='text-danger'>Land Price is &#8203; " + pred + " &#8203;</span>");
+                        $("#prediction").append("Land Price per meter is <span class='text-danger'> &#8203; " + (Math.round(pred * 100) / 100).toFixed(2) + " &#8203;</span> ");
                     }, 500);
 
 
                 },
-                error: function (data) {
+                error: function(data) {
 
                 }
             })
@@ -525,7 +510,20 @@
             $("#land_modal").modal('hide');
         });
 
+
+        function random_data_land() {
+            $("#MainLocation").val(getRandomInt(2, 3));
+            $("#SubLocation").val(getRandomInt(4, 10));
+            $("#neighborhood").val(getRandomInt(11, 146));
+            $("#frontage").val(getRandomInt(147, 156));
+            $("#purpose").val(getRandomInt(157, 160));
+            var sw = getRandomInt(5, 100)
+            $("#streetwidth").val(sw);
+            $("#size").val(parseInt(getRandomInt(207, 10000000) / sw));
+        }
+
         add_neighborhood()
+
         function add_neighborhood() {
             var str = "'حي ظهرة لبن','حي العارض','حي الريان','حي السلي','حي اشبيلية'," +
                 "'حي الزهراء','حي الشرق','حي القيروان','حي النرجس'," +
@@ -576,38 +574,41 @@
                 'حي الزهراء',
                 'حي الزهرة',
                 'حي السعادة',
-                'حي السفارات','حي السلام','حي السلامة','حي السلي','حي السليمانية','حي السويدي','حي الشاطئ','حي الشراع','حي الشرق','حي الشفا','حي الشميسي','حي الشهداء','حي الصالحية','حي الصحافة','حي الصفا',
+                'حي السفارات', 'حي السلام', 'حي السلامة', 'حي السلي', 'حي السليمانية', 'حي السويدي', 'حي الشاطئ', 'حي الشراع', 'حي الشرق', 'حي الشفا', 'حي الشميسي', 'حي الشهداء', 'حي الصالحية', 'حي الصحافة', 'حي الصفا',
                 'حي الصوارى',
                 'حي الضباط',
                 'حي العارض',
-                'حي العريجاء','حي العريجاء الغربية','حي العريجاء الوسطى','حي العزيزية','حي العقيق','حي العليا','حي الغدير','حي الغنامية','حي الفاخرية','حي الفاروق','حي الفردوس','حي الفروسية','حي الفضيلة','حي الفلاح','حي الفيحاء','حي الفيصلية','حي القادسية','حي القدس','حي القيروان','حي اللؤلؤ',
+                'حي العريجاء', 'حي العريجاء الغربية', 'حي العريجاء الوسطى', 'حي العزيزية', 'حي العقيق', 'حي العليا', 'حي الغدير', 'حي الغنامية', 'حي الفاخرية', 'حي الفاروق', 'حي الفردوس', 'حي الفروسية', 'حي الفضيلة', 'حي الفلاح', 'حي الفيحاء', 'حي الفيصلية', 'حي القادسية', 'حي القدس', 'حي القيروان', 'حي اللؤلؤ',
                 'حي المحمدية',
-                'حي المربع','حي المرجان','حي المرسلات','حي المروة','حي المروج','حي المشاعل','حي المصانع','حي المصفاة','حي المصيف','حي المعذر الشمالي','حي المعيزلة',
-                'حي المغرزات','حي الملز','حي الملقا','حي الملك عبدالله','حي الملك فهد','حي الملك فيصل','حي المنار','حي المهدية','حي المونسية','حي النخيل',
-                'حي الندى', 'حي النرجس', 'حي النزهة', 'حي النسيم الشرقي', 'حي النسيم الغربي', 'حي النظيم', 'حي النعيم', 'حي النفل', 'حي النموذجية', 'حي النهضة', 'حي النور', 'حي الهدا', 'حي الواحة', 'حي الوادي', 'حي الورود', 'حي الياسمين', 'حي الياقوت', 'حي اليرموك', 'حي اليمامة', 'حي ام الحمام الغربي', 'حي ام حبلين', 'حي بحرة', 'حي بدر', 'حي بنبان', 'حي بني مالك', 'حي حطين', 'حي صلاح الدين', 'حي ضاحية نمار', 'حي طويق', 'حي طيبة', 'حي ظهرة البديعة', 'حي ظهرة لبن', 'حي ظهرة نمار', 
-                'حي عرقة', 'حي عريض', 'حي عكاظ', 'حي عليشة', 'حي غرناطة', 'حي قرطبة', 'حي لبن', 'حي مركز الملك عبدالله للدراسات والبحوث', 'حي مريخ', 'حي مشرفة', 'حي نمار']
-            
+                'حي المربع', 'حي المرجان', 'حي المرسلات', 'حي المروة', 'حي المروج', 'حي المشاعل', 'حي المصانع', 'حي المصفاة', 'حي المصيف', 'حي المعذر الشمالي', 'حي المعيزلة',
+                'حي المغرزات', 'حي الملز', 'حي الملقا', 'حي الملك عبدالله', 'حي الملك فهد', 'حي الملك فيصل', 'حي المنار', 'حي المهدية', 'حي المونسية', 'حي النخيل',
+                'حي الندى', 'حي النرجس', 'حي النزهة', 'حي النسيم الشرقي', 'حي النسيم الغربي', 'حي النظيم', 'حي النعيم', 'حي النفل', 'حي النموذجية', 'حي النهضة', 'حي النور', 'حي الهدا', 'حي الواحة', 'حي الوادي', 'حي الورود', 'حي الياسمين', 'حي الياقوت', 'حي اليرموك', 'حي اليمامة', 'حي ام الحمام الغربي', 'حي ام حبلين', 'حي بحرة', 'حي بدر', 'حي بنبان', 'حي بني مالك', 'حي حطين', 'حي صلاح الدين', 'حي ضاحية نمار', 'حي طويق', 'حي طيبة', 'حي ظهرة البديعة', 'حي ظهرة لبن', 'حي ظهرة نمار',
+                'حي عرقة', 'حي عريض', 'حي عكاظ', 'حي عليشة', 'حي غرناطة', 'حي قرطبة', 'حي لبن', 'حي مركز الملك عبدالله للدراسات والبحوث', 'حي مريخ', 'حي مشرفة', 'حي نمار'
+            ]
+
             $("#neighborhood").append("<option selected>Choose...</option>");
             var it = 11;
-            str.forEach(function (i, q) {
+            str.forEach(function(i, q) {
                 $("#neighborhood").append("<option value='" + it++ + "'>" + i + "</option>");
             })
         }
         add_frontage()
+
         function add_frontage() {
-            var str = ['3 شوارع','4 شوارع','جنوب','جنوب شرقي','جنوب غربي','شرق','شمال','شمال شرقي','شمال غربي','غرب'];
+            var str = ['3 شوارع', '4 شوارع', 'جنوب', 'جنوب شرقي', 'جنوب غربي', 'شرق', 'شمال', 'شمال شرقي', 'شمال غربي', 'غرب'];
             $("#frontage").append("<option selected>Choose...</option>");
             var it = 147;
-            str.forEach(function (i, q) {
+            str.forEach(function(i, q) {
                 $("#frontage").append("<option value='" + it++ + "'>" + i + "</option>");
             })
         }
         add_purpose()
+
         function add_purpose() {
             var str = ['تجاري', 'سكني', 'سكني أو تجاري', 'غير محدد'];
             $("#purpose").append("<option selected>Choose...</option>");
             var it = 157;
-            str.forEach(function (i, q) {
+            str.forEach(function(i, q) {
                 $("#purpose").append("<option value='" + it++ + "'>" + i + "</option>");
             })
         }
