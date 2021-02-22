@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Machine Learning Projects</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
 </head>
 
 <body class="">
@@ -18,19 +20,51 @@
 
         </h3>
         <div class="row h-100 align-items-center">
-            <div class="col-lg-6 col-sm-12 d-flex flex-row justify-content-center ">
-                <div class="card ml" style="width: 40rem; cursor: pointer;" id="student">
+            <div class="col-lg-6 col-sm-12 d-flex flex-row justify-content-center my-2">
+                <div class="card ml" style="width: 35rem; cursor: pointer;" id="student">
                     <img class="card-img-top" src="https://www.sansone-ac.com/wp-content/uploads/2016/09/Does-Classroom-Temperature-Affect-Students-Performance-794x530.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h4 class="card-text text-center">Student's Academic Performance Classification</h4>
                     </div>
+                    <div class="card-footer">
+                        <div class="container">
+                            <div class="row text-center">
+                                <div class="col col-lg-6"><a href="https://github.com/Ahmad-Almosallam/Students-Academic-Performance-Classification" target="blank"><i class="fab fa-github fa-2x"></i></a></div>
+                                <div class="col col-lg-6"><a href="https://www.kaggle.com/aljarah/xAPI-Edu-Data" target="blank"><i class="fas fa-table fa-2x"></i></a></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-lg-6 col-sm-12 d-flex flex-row justify-content-center ">
-                <div class="card ml" style="width: 40rem; cursor: pointer;" id="land">
+            <div class="col-lg-6 col-sm-12 d-flex flex-row justify-content-center my-2">
+                <div class="card ml" style="width: 35rem; cursor: pointer;" id="land">
                     <img class="card-img-top" src="https://www.mikestarks.com/wp-content/uploads/2017/07/land-price.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h4 class="card-text text-center">Land Prices Prediction</h4>
+                    </div>
+                    <div class="card-footer">
+                        <div class="container">
+                            <div class="row text-center">
+                                <div class="col col-lg-6"><a href="https://github.com/Ahmad-Almosallam/Land-Price-Prediction" target="blank"><i class="fab fa-github fa-2x"></i></a></div>
+                                <div class="col col-lg-6"><a href="https://www.kaggle.com/hussainalqatari/land-market-in-saudi-arabia" target="blank"><i class="fas fa-table fa-2x"></i></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-sm-12 d-flex flex-row justify-content-center my-2">
+                <div class="card ml" style="width: 35rem; cursor: pointer;" id="flower_image">
+                    <img class="card-img-top" src="https://i.pinimg.com/originals/73/da/0d/73da0d70fbc0e6bc2ece01e7f394946c.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-text text-center">Flower Image Classifier With TensorFlow</h5>
+                    </div>
+                    <div class="card-footer">
+                        <div class="container">
+                            <div class="row text-center">
+                                <div class="col col-lg-6"><a href="https://github.com/Ahmad-Almosallam/Image-Classifier-TensorFlow" target="blank"><i class="fab fa-github fa-2x"></i></a></div>
+                                <div class="col col-lg-6"><a href="https://www.robots.ox.ac.uk/~vgg/data/flowers/102/index.html" target="blank"><i class="fas fa-table fa-2x"></i></a></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -342,6 +376,31 @@
             </div>
         </div>
     </div>
+
+    <!-- Flower image classifier modal -->
+    <div class="modal" tabindex="-1" role="dialog" id="flower_modal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Flower image classifier (SOON)</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="input-group mb-3">
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="flower-image">
+                            <label class="custom-file-label" for="flower-image">Choose Flower Image</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="predict_flower" class="btn btn-primary">Predeict</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -351,8 +410,10 @@
             var id = $(this).attr("id");
             if (id == "student") {
                 $("#student_modal").modal('show');
-            } else {
+            } else if (id == "land") {
                 $("#land_modal").modal('show');
+            } else if (id == "flower_image") {
+                $("#flower_modal").modal('show');
             }
         });
 
