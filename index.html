@@ -16,9 +16,26 @@
 
     <!-- Main page -->
     <div class="container-fluid" id="main_page" style="height: 980px;">
-        <h3 class="d-flex flex-row justify-content-center mt-5" style="display: none;" id="prediction">
 
-        </h3>
+        <!-- Prediction modal -->
+        <div class="modal" tabindex="-1" role="dialog" id="prediction_modal">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Prediction</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h3 class="d-flex flex-row justify-content-center mt-5" id="prediction">
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
         <div class="row h-100 align-items-center">
             <div class="col-lg-6 col-sm-12 d-flex flex-row justify-content-center my-2">
                 <div class="card ml" style="width: 35rem; cursor: pointer;" id="student">
@@ -439,9 +456,9 @@
                     </div>
                     <div class="input-group mb-3">
                         <div class="custom-file">
-                            <button class="form-control" id="recordButton">Record</button>
-                            <button class="form-control" disabled id="stopButton">Stop Record</button>
-                            <button class="form-control" disabled id="pauseButton">Pause</button>
+                            <button class="form-control mx-1" style="cursor: pointer;" id="recordButton">Record</button>
+                            <button class="form-control mx-1 btn-danger" style="cursor: not-allowed;" disabled id="stopButton">Stop Record</button>
+                            <button class="form-control mx-1 btn-warning" style="cursor: not-allowed;" disabled id="pauseButton">Pause</button>
                         </div>
 
                     </div>
@@ -450,7 +467,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" id="predict_gender" disabled class="btn btn-primary">Predict</button>
+                    <button type="button" id="predict_gender" style="cursor: not-allowed;" disabled class="btn btn-primary">Predict</button>
                 </div>
             </div>
         </div>
@@ -556,7 +573,7 @@
                 success: function(n) {
                     var a = " High-Level ";
                     2 == n.data ? a = " Medium-Level " : 1 == n.data && (a = " Low-Level "), setTimeout(function() {
-                        $.LoadingOverlay("hide"), $("#prediction").show(), $("#prediction").append(" <span class='text-danger'>&#8203; " + a + " &#8203;</span> student")
+                        $.LoadingOverlay("hide"), $('#prediction_modal').modal('show'), $("#prediction").append(" <span class='text-danger'>&#8203; " + a + " &#8203;</span> student")
                     }, 500)
                 },
                 error: function(n) {}
@@ -588,7 +605,8 @@
                 success: function(n) {
                     var a = n.data;
                     setTimeout(function() {
-                        $.LoadingOverlay("hide"), $("#prediction").show(), $("#prediction").append("Land Price per meter is <span class='text-danger'> &#8203; " + (Math.round(100 * a) / 100).toFixed(2) + " &#8203;</span> ")
+                        $.LoadingOverlay("hide"), $("#prediction").append("Land Price per meter is <span class='text-danger'> &#8203; " + (Math.round(100 * a) / 100).toFixed(2) + " &#8203;</span> "),
+                            $('#prediction_modal').modal('show');
                     }, 500)
                 },
                 error: function(n) {}
@@ -615,9 +633,9 @@
                     $('#gender_modal').modal('hide');
                     setTimeout(function() {
                         $.LoadingOverlay("hide");
-                        $("#prediction").show();
+                        $('#prediction_modal').modal('show');
+                        $("#prediction").text(" ");
                         $("#prediction").append("Gender is <span class='text-danger'> &#8203; " + pred + " &#8203;</span> ");
-                        window.scrollTo(0, 0);
                     }, 500)
                 },
                 error: function(n) {
@@ -700,9 +718,7 @@
             Disable the record button until we get a success or fail from getUserMedia() 
         */
 
-            recordButton.disabled = true;
-            stopButton.disabled = false;
-            pauseButton.disabled = false
+
 
             /*
             We're using the standard promise based getUserMedia() 
@@ -735,6 +751,15 @@
                 rec = new Recorder(input, {
                     numChannels: 1
                 })
+
+
+                recordButton.disabled = true;
+                recordButton.style.cursor = "not-allowed";
+                stopButton.disabled = false;
+                stopButton.style.cursor = "pointer";
+                pauseButton.disabled = false;
+                pauseButton.style.cursor = "pointer";
+
 
                 //start the recording process
                 rec.record()
@@ -771,6 +796,7 @@
         function stopRecording() {
             console.log("stopButton clicked");
             $('#predict_gender').attr('disabled', false);
+            $('#predict_gender').css('cursor', 'pointer');
             $('#is_rec').text('Recording stopped');
 
             //disable the stop button, enable the record too allow for new recordings
