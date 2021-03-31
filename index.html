@@ -800,9 +800,12 @@
             $('#is_rec').text('Recording stopped');
 
             //disable the stop button, enable the record too allow for new recordings
-            stopButton.disabled = true;
             recordButton.disabled = false;
+            recordButton.style.cursor = "pointer";
+            stopButton.disabled = true;
+            stopButton.style.cursor = "not-allowed";
             pauseButton.disabled = true;
+            pauseButton.style.cursor = "not-allowed";
 
             //reset button just in case the recording is stopped while paused
             pauseButton.innerHTML = "Pause";
